@@ -21,10 +21,13 @@
     }else if ($a !== $b){
         echo "$a is equal to $b";
     }
-
-
-
-
+  $user = 'Anudeep';
+  $isLogedIn = False;
+   if ($isLogedIn){
+    echo "<h1>Hello Welcome back, $user </h1>";
+   }else{
+    echo "<h1> Welcome to the Site </h1>";
+   }
 
     //php ends here
     ?> 
