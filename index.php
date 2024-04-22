@@ -10,13 +10,14 @@
 
 
 function hello_world(){
-    echo "Hello World";
+    return "Hello World";
 }
 
 
-hello_world();
+echo hello_world();
 
 
+echo date_default_timezone_set('UTC');
 
 
 
