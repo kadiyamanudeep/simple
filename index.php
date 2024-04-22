@@ -2,10 +2,128 @@
     <head><title>hello world script</title></head>
     <body>
     <?php 
+    
+
+//  ***********************************
+//  *         Functions               *
+//  ***********************************
+
+
+function hello_world(){
+    echo "Hello World";
+}
+
+
+hello_world();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  ***********************************
+//  *         Loops                   *
+//  ***********************************
+
+
+
+// for ($i=10; $i>0 ; $i--) {
+//     echo $i;
+// }
+
+
+// $current = 1;
+// $previous = 0;
+// $next = null;
+// $limit = 200;
+
+// while($current < $limit){
+//     echo $current. ',';
+//     $next = $current + $previous;
+//     $previous = $current;
+//     $current = $next;
+// }
+
+
+// for($i=0; $i<200; $i++){
+//     echo "$i  <br>";
+// }
+
+
+//For Each Loops
+
+// $colors = array ('red', 'blue', 'orange', 'green',);
+// foreach($colors as $color){
+//     echo "<p>" . $color . "</p>";
+// }
+
+// $friends = array (
+//     'anudeep' => 'gopalapuram',
+//     'raju' => 'Hyderabad',
+//     'ricky' => 'hyderabad',
+// );
+
+// foreach($friends as $name => $city){
+//     echo "<p>$name lives in $city</p>";
+// }
+
+//For Loops
+
+// $colors = array ('red', 'blue', 'orange', 'green',);
+
+// for( $i=0; $i<sizeof($colors); $i++ ){
+//     echo "<p>". $colors[$i]. "</p>";
+// }
+
+
+
+
+
+
+
+
+// Do/While
+
+// $i = 0;
+// do{
+//     echo "<p> $i </p>";
+//     $i++;
+// }while($i<10);
+
+
+// // while loop
+
+// while($i <10){
+//      echo "<p> $i </p>"; 
+//     $i++;
+//     }
 
     // practising math operators
-    echo "i am here";
-
 
 
 // Challenge in math operators
@@ -28,27 +146,7 @@
 
     // echo ($a%2 === 0) ? "$a is even" : "$a is odd"; // Cheking odd or even number using ternary operator
 
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
