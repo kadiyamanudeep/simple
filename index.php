@@ -12,22 +12,45 @@
 // function hello_world(){
 //     return "Hello World";
 // }
-
-
 // echo hello_world();
 
+$name = array ('joe','Erin','teresa', 'louis');
+usort($names, function($a, $b){
+    return $a[1] <=> $b[1];
+});
 
-function is_pallindrome($string){
-    $string = str_replace(' ','',strtolower($string));
-    return ($string == strrev($string) );
-}
+// "<pre>"
+// print_r($names)
+// "</pre>"
 
-$check_string = 'race car';
-if(is_pallindrome($check_string)){
-    echo "$check_string is Pallindrome";
-}else{
-    echo "$check_string  is not pallindrome";
-}
+ // basic calculator funtions
+// function math($a, $b= 2 , $op = 'multiply'){
+//     if ('add' == $op){
+//         return $a + $b;
+//     }else if('sub' == $op){
+//         return $a - $b;
+//     }else if('div' == $op){
+//        return $a/$b; 
+//     }
+//     return $a*$b;
+// };
+
+// echo math(4, op : 'div', b: 35);
+
+
+
+// user defined function function for palindrome
+// function is_pallindrome($string){
+//     $string = str_replace(' ','',strtolower($string));
+//     return ($string == strrev($string) );
+// }
+
+// $check_string = 'race car';
+// if(is_pallindrome($check_string)){
+//     echo "$check_string is Pallindrome";
+// }else{
+//     echo "$check_string  is not pallindrome";
+// }
 
 
 
