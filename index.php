@@ -9,28 +9,25 @@
 //  ***********************************
 
 
-function hello_world(){
-    return "Hello World";
+// function hello_world(){
+//     return "Hello World";
+// }
+
+
+// echo hello_world();
+
+
+function is_pallindrome($string){
+    $string = str_replace(' ','',strtolower($string));
+    return ($string == strrev($string) );
 }
 
-
-echo hello_world();
-
-
-echo date_default_timezone_set('UTC');
-
-
-
-
-
-
-
-
-
-
-
-
-
+$check_string = 'race car';
+if(is_pallindrome($check_string)){
+    echo "$check_string is Pallindrome";
+}else{
+    echo "$check_string  is not pallindrome";
+}
 
 
 
