@@ -1,125 +1,93 @@
 <html>
-    <head><title>hello world script</title></head>
-    <body>
-    <?php 
-    
 
-//  ***********************************
-//  *         Functions               *
-//  ***********************************
+<head>
+    <title>hello world script</title>
+</head>
 
-
-// function hello_world(){
-//     return "Hello World";
-// }
-// echo hello_world();
-
-$name = array ('joe','Erin','teresa', 'louis');
-usort($names, function($a, $b){
-    return $a[1] <=> $b[1];
-});
-echo "anudeep";
-// "<pre>"
-// print_r($names)
-// "</pre>"
-
- // basic calculator funtions
-// function math($a, $b= 2 , $op = 'multiply'){
-//     if ('add' == $op){
-//         return $a + $b;
-//     }else if('sub' == $op){
-//         return $a - $b;
-//     }else if('div' == $op){
-//        return $a/$b; 
-//     }
-//     return $a*$b;
-// };
-
-// echo math(4, op : 'div', b: 35);
+<body>
+    <?php
 
 
+    //  ***********************************
+    //  *            Classes              *
+    //  ***********************************
+    class person
+    {
+        var $name;
+        var $age;
+        var $birthday = false;
+        function __construct($name, $age)
+        {
+            $this->name = $name;
+            $this->age = $age;
+        }
+        public function get_name()
+        {
+            return $this->name;
+        }
+        public function get_age()
+        {
+            return $this->age;
+        }
+    }
 
-// user defined function function for palindrome
-// function is_pallindrome($string){
-//     $string = str_replace(' ','',strtolower($string));
-//     return ($string == strrev($string) );
-// }
+    $joe = new person('Joe', 35);
+    $rob = new person('Rob', 30);
 
-// $check_string = 'race car';
-// if(is_pallindrome($check_string)){
-//     echo "$check_string is Pallindrome";
-// }else{
-//     echo "$check_string  is not pallindrome";
-// }
+    echo $joe->get_name();
 
 
 
 
 
 
+    //  ***********************************
+    //  *         Functions               *
+    //  ***********************************
+
+
+    // function hello_world(){
+    //     return "Hello World";
+    // }
+    // echo hello_world();
+    $name = array('joe', 'Erin', 'teresa', 'louis');
+    // usort($names, function($a, $b){
+    //     return $a[1] <=> $b[1];
+    // });
+    // echo "anudeep";
+    // 
+    // "<pre>"
+    // print_r($names)
+    // "</pre>"
+
+    // basic calculator funtions
+    // function math($a, $b= 2 , $op = 'multiply'){
+    //     if ('add' == $op){
+    //         return $a + $b;
+    //     }else if('sub' == $op){
+    //         return $a - $b;
+    //     }else if('div' == $op){
+    //        return $a/$b; 
+    //     }
+    //     return $a*$b;
+    // };
+
+    // echo math(4, op : 'div', b: 35);
 
 
 
+    // user defined function function for palindrome
+    // function is_pallindrome($string){
+    //     $string = str_replace(' ','',strtolower($string));
+    //     return ($string == strrev($string) );
+    // }
 
-
-
-
-
-
-
-//  ***********************************
-//  *         Loops                   *
-//  ***********************************
-
-
-
-// for ($i=10; $i>0 ; $i--) {
-//     echo $i;
-// }
-
-
-// $current = 1;
-// $previous = 0;
-// $next = null;
-// $limit = 200;
-
-// while($current < $limit){
-//     echo $current. ',';
-//     $next = $current + $previous;
-//     $previous = $current;
-//     $current = $next;
-// }
-
-
-// for($i=0; $i<200; $i++){
-//     echo "$i  <br>";
-// }
-
-
-//For Each Loops
-
-// $colors = array ('red', 'blue', 'orange', 'green',);
-// foreach($colors as $color){
-//     echo "<p>" . $color . "</p>";
-// }
-
-// $friends = array (
-//     'anudeep' => 'gopalapuram',
-//     'raju' => 'Hyderabad',
-//     'ricky' => 'hyderabad',
-// );
-
-// foreach($friends as $name => $city){
-//     echo "<p>$name lives in $city</p>";
-// }
-
-//For Loops
-
-// $colors = array ('red', 'blue', 'orange', 'green',);
-
-// for( $i=0; $i<sizeof($colors); $i++ ){
-//     echo "<p>". $colors[$i]. "</p>";
-// }
+    // $check_string = 'race car';
+    // if(is_pallindrome($check_string)){
+    //     echo "$check_string is Pallindrome";
+    // }else{
+    //     echo "$check_string  is not pallindrome";
+    // }
 
 
 
@@ -128,26 +96,95 @@ echo "anudeep";
 
 
 
-// Do/While
-
-// $i = 0;
-// do{
-//     echo "<p> $i </p>";
-//     $i++;
-// }while($i<10);
 
 
-// // while loop
 
-// while($i <10){
-//      echo "<p> $i </p>"; 
-//     $i++;
-//     }
+
+
+
+
+
+    //  ***********************************
+    //  *         Loops                   *
+    //  ***********************************
+
+
+
+    // for ($i=10; $i>0 ; $i--) {
+    //     echo $i;
+    // }
+
+
+    // $current = 1;
+    // $previous = 0;
+    // $next = null;
+    // $limit = 200;
+
+    // while($current < $limit){
+    //     echo $current. ',';
+    //     $next = $current + $previous;
+    //     $previous = $current;
+    //     $current = $next;
+    // }
+
+
+    // for($i=0; $i<200; $i++){
+    //     echo "$i  <br>";
+    // }
+
+
+    //For Each Loops
+
+    // $colors = array ('red', 'blue', 'orange', 'green',);
+    // foreach($colors as $color){
+    //     echo "<p>" . $color . "</p>";
+    // }
+
+    // $friends = array (
+    //     'anudeep' => 'gopalapuram',
+    //     'raju' => 'Hyderabad',
+    //     'ricky' => 'hyderabad',
+    // );
+
+    // foreach($friends as $name => $city){
+    //     echo "<p>$name lives in $city</p>";
+    // }
+
+    //For Loops
+
+    // $colors = array ('red', 'blue', 'orange', 'green',);
+
+    // for( $i=0; $i<sizeof($colors); $i++ ){
+    //     echo "<p>". $colors[$i]. "</p>";
+    // }
+
+
+
+
+
+
+
+
+    // Do/While
+
+    // $i = 0;
+    // do{
+    //     echo "<p> $i </p>";
+    //     $i++;
+    // }while($i<10);
+
+
+    // // while loop
+
+    // while($i <10){
+    //      echo "<p> $i </p>"; 
+    //     $i++;
+    //     }
 
     // practising math operators
 
 
-// Challenge in math operators
+    // Challenge in math operators
     // $a = (14+82-32/2)**2;
     // $b = 18*(3/6-9)*10;
     // $c = 5*(12/2-8*4+12*6);
@@ -156,7 +193,7 @@ echo "anudeep";
     // echo "<pre>";
     // print_r($results);
     // echo "</pre>";
-// *****************************
+    // *****************************
 
 
 
@@ -167,11 +204,11 @@ echo "anudeep";
 
     // echo ($a%2 === 0) ? "$a is even" : "$a is odd"; // Cheking odd or even number using ternary operator
 
- 
 
 
 
-// NUmber Guessing challenge using if condition
+
+    // NUmber Guessing challenge using if condition
     // $min = 1;
     // $max = 50;
     // $guess = rand(1,200);
@@ -193,7 +230,7 @@ echo "anudeep";
     // echo "<br> Guess is = $guess";
 
 
-// Second Challenge using match functionn
+    // Second Challenge using match functionn
     // $min = 1;
     // $max = 50;
     // $guess = 25;
@@ -215,7 +252,7 @@ echo "anudeep";
     // function add_to_x($x){
     //     return $x +5;
     // };
-    
+
     // $x = 0 ;
 
     // $result = match(true){
@@ -244,12 +281,12 @@ echo "anudeep";
     //     default => 'default option'
     // };
 
-    
 
 
 
 
-    
+
+
     // $total = 10; 
     // switch ($total){
     //     case 1:
@@ -262,7 +299,7 @@ echo "anudeep";
     //     echo '<p> $total is more than 5 </p>';
     // }
 
-        // switch Example
+    // switch Example
     // =================
     // $turtle = 'leo';
     // $bandana = '';
@@ -296,27 +333,27 @@ echo "anudeep";
     // };
     // echo $turtle;
 
-//Ternary operation Example
+    //Ternary operation Example
 
-//   $user = "Deepu ";
-//   $isLogedIn = false;
-//   $message = "welcome" . ($isLogedIn ? " Back, $user!" : " Back!");
+    //   $user = "Deepu ";
+    //   $isLogedIn = false;
+    //   $message = "welcome" . ($isLogedIn ? " Back, $user!" : " Back!");
 
-//    $user = $user ? : "Deepu";
+    //    $user = $user ? : "Deepu";
 
-//    echo $user;
+    //    echo $user;
 
 
 
-//******************** */
-    
+    //******************** */
+
     // $a = 9;
     // $b = "9";
     // $c = $a && $b;
     // $d = $a || $b;
     // $e = $b && $c;
     // $f = $a || $d;
-    
+
     // $logic = array( $a, $b, $c, $d, $e, $f, );
     // echo '<pre>';
     // var_dump($logic);
@@ -336,7 +373,8 @@ echo "anudeep";
     //    }
     //php ends here
 
-    ?> 
+    ?>
 
-    </body>
-</html>   
+</body>
+
+</html>
