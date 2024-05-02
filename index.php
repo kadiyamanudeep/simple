@@ -11,33 +11,94 @@
     //  ***********************************
     //  *            Classes              *
     //  ***********************************
-    class person
+
+    class Customer
     {
-        var $name;
-        var $age;
-        var $birthday = false;
-        function __construct($name, $age)
+        private $name;
+        public function setName($name)
         {
             $this->name = $name;
-            $this->age = $age;
         }
-        public function get_name()
+        public function getName()
         {
             return $this->name;
         }
-        public function get_age()
-        {
-            return $this->age;
-        }
     }
 
-    $joe = new person('Joe', 35);
-    $rob = new person('Rob', 30);
+    $customer = new Customer();
+    $customer->setName('anudeep');
+    echo $customer->getName();
 
-    echo $joe->get_name();
+    // class Person
+    // {
+    //     var $name;
+    //     var $age;
+    //     var $birthday = false;
+    //     public function __construct($name, $age)
+    //     {
+    //         $this->name = $name;
+    //         $this->age = $age;
+    //     }
+    //     public function get_name()
+    //     {
+    //         return $this->name;
+    //     }
+    //     public function get_age()
+    //     {
+    //         return $this->age;
+    //     }
+    // }
+
+    // $joe = new Person('Joe', 35);
+    // $rob = new Person('Rob', 30);
+
+    // echo $joe->get_name();
 
 
 
+
+    // class BankAccount
+    // {
+    //     public $accountNumber;
+    //     public $balance;
+    //     public function deposit($amount)
+    //     {
+    //         if ($amount > 0) {
+    //             $this->balance += $amount;
+    //         }
+    //         return $this->balance;
+    //     }
+    //     public function withdrawl($amount)
+    //     {
+    //         if ($amount <= $this->balance) {
+    //             $this->balance -= $amount;
+    //             return $this->balance;
+    //         }
+    //         return "insufficient funds";
+    //     }
+    // }
+
+    // $account = new BankAccount();
+    // $account->accountNumber = 1;
+    // $account->balance = 2000;
+    // echo $account->deposit(200);
+
+    // class Customer
+    // {
+    //     public $name;
+    //     public function getName()
+    //     {
+    //         return $this->name;
+    //     }
+    // }
+
+    // $customer = new Customer();
+    // $customer->name = 'anudeep';
+    // echo $customer->getName();
+
+    // $customerTwo = new Customer();
+    // $customerTwo->name = 'sowmya';
+    // echo $customerTwo->getName();
 
 
 
@@ -50,7 +111,7 @@
     //     return "Hello World";
     // }
     // echo hello_world();
-    $name = array('joe', 'Erin', 'teresa', 'louis');
+    // $name = array('joe', 'Erin', 'teresa', 'louis');
     // usort($names, function($a, $b){
     //     return $a[1] <=> $b[1];
     // });
