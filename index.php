@@ -10,14 +10,43 @@ require './inc/variable.php'; ?>
 <body>
 
 
+
+
+
+
+    <!--  ***********************************
+          *            NameSpace            *
+          *********************************** -->
+
+    <?php
+    include './namespace/learningspace.php';
+
+    function double($a)
+    {
+        return $a + 2;
+    }
+    echo '<p>' . double(5) . '</p>';
+    echo '<p>' . learningSpace\double(5) . '</p>';
+    ?>
+
+
+
+
+
+
+
     <!--  ***********************************
           *       Include and Rquire        *
           *********************************** -->
 
-    <?php include './temmplates/nav.php' ?>
-    <h1><?php echo $title; ?></h1>
-    <?php para_print($description) ?>
-    <small><?php echo $author; ?></small>
+    <!-- <?php // include './temmplates/nav.php' 
+            ?>
+    <h1><?php //echo $title; 
+        ?></h1>
+    <?php // para_print($description) 
+    ?>
+    <small><?php // echo $author; 
+            ?></small> -->
 
 
 
