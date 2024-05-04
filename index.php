@@ -1,12 +1,23 @@
+<?php require './inc/variable.php' ?>
 <html>
 
 <head>
-    <title>hello world script</title>
+    <title><?php echo $title; ?></title>
 </head>
 
 <body>
-    <?php
 
+
+    <!--  ***********************************
+          *       Include and Rquire        *
+          *********************************** -->
+
+    <?php include './temmplates/nav.php' ?>
+    <h1><?php echo $title; ?></h1>
+    <p><?php echo $description; ?></p>
+    <small><?php echo $author; ?></small>
+
+    <?php
 
     //  ***********************************
     //  *            Classes              *
