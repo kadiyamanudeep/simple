@@ -1,6 +1,5 @@
 <?php
 
-
 namespace  learningSpace;
 
 function double($a)
