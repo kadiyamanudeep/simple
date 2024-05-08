@@ -17,10 +17,20 @@ require './inc/variable.php'; ?>
           /          Form Validation        /
           =================================== -->
 
+    <?php
+    $form_complete = null;
+
+    ?>
+
+    <h2>Contact</h2>
+
     <form name="contact" method="POST">
 
         <div>
-
+            <?php if (isset($_POST['name']) && empty(trim($_POST['name']))) {
+                echo "<p class=\"alert\"> Name is required </p> ";
+                $form_complete = false;
+            } ?>
             <label for="name">Name:</label> <input type="text" name="name" id="name" placeholder="Enter Your Full name" required />
         </div>
         <div><label for="email">Email:</label> <input type="email" name="email" id="email" placeholder="Enter your Email" required /></div>
@@ -121,6 +131,24 @@ require './inc/variable.php'; ?>
     </form>
  -->
 
+    <style>
+        .alert {
+            color: red;
+        }
+    </style>
+    <?php
+    $form_complete ??  true;
+    if ($form_complete) {
+        foreach ($_POST as $name => $value) {
+            if ('submit' != $name) {
+                if (is_array($value)) {
+                    $value = implode(',', $value);
+                }
+                echo '<p>' . ucfirst($name) . " = " . $value . '</p>';
+            }
+        }
+    }
+    ?>
 
 </body>
 
