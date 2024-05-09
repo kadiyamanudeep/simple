@@ -1,4 +1,5 @@
 <?php
-$name = "anudeep";
 
-echo !empty($name);
+$string = "hello anudeep, How are you.";
+
+echo strlen($string);
